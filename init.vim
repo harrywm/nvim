@@ -6,11 +6,19 @@ Plug 'towolf/vim-helm'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'duane9/nvim-rg'
+Plug 'beauwilliams/statusline.lua'
+Plug 'nvim-tree/nvim-web-devicons'
+Plug 'nvimdev/dashboard-nvim' 
+Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
+Plug 'nvim-telescope/telescope-file-browser.nvim'
+Plug 'ahmedkhalf/project.nvim'
+Plug 'nyngwang/NeoTerm.lua'
+Plug 'f-person/git-blame.nvim'
 call plug#end() 
 
-lua require('config')
+set termguicolors
+colorscheme catppuccin " catppuccin-latte, catppuccin-frappe, catppuccin-macchiato, catppuccin-mocha
 
-" Find files using Telescope command-line sugar.
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
