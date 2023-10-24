@@ -14,18 +14,19 @@ Plug 'nvim-telescope/telescope-file-browser.nvim'
 Plug 'ahmedkhalf/project.nvim'
 Plug 'nyngwang/NeoTerm.lua'
 Plug 'f-person/git-blame.nvim'
-call plug#end() 
+Plug 'nvim-focus/focus.nvim'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'cuducos/yaml.nvim'
+Plug 'akinsho/toggleterm.nvim', {'tag': '*'}
+call plug#end()
 
+inoremap { {}<Esc>ha
+inoremap ( ()<Esc>ha
+inoremap [ []<Esc>ha
+inoremap " ""<Esc>ha
+inoremap ' ''<Esc>ha
+inoremap ` ``<Esc>ha
+
+set number
 set termguicolors
 colorscheme catppuccin " catppuccin-latte, catppuccin-frappe, catppuccin-macchiato, catppuccin-mocha
-
-nnoremap <leader>ff <cmd>Telescope find_files<cr>
-nnoremap <leader>fg <cmd>Telescope live_grep<cr>
-nnoremap <leader>fb <cmd>Telescope buffers<cr>
-nnoremap <leader>fh <cmd>Telescope help_tags<cr>
-
-" Using Lua functions
-nnoremap <leader>ff <cmd>lua require('telescope.builtin').find_files()<cr>
-nnoremap <leader>fg <cmd>lua require('telescope.builtin').live_grep()<cr>
-nnoremap <leader>fb <cmd>lua require('telescope.builtin').buffers()<cr>
-nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<cr>

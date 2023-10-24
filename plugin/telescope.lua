@@ -9,5 +9,5 @@ end)
 
 vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
 vim.keymap.set('n', '<leader>df', ':Telescope file_browser hidden=true path=%:p:h select_buffer=true<CR>', { noremap = true })
-
+vim.keymap.set('n', '<leader>pf', ':Telescope projects hidden=true <CR>', { noremap = true })
 vim.keymap.set('n', '<leader>fu', builtin.buffers, {})
