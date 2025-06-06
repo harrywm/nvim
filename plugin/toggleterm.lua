@@ -1,6 +1,7 @@
 require('toggleterm').setup()
 vim.keymap.set('n', '<C-j>', '<Cmd>ToggleTerm direction=float<CR>', {silent=true})
 vim.keymap.set('t', '<C-j>', 'C-d>')
+vim.keymap.set('n', '<C-k>', '<Cmd>ToggleTerm size=90 direction=vertical<CR>', {silent=true})
 
 function _G.set_terminal_keymaps()
   local opts = {buffer = 0}
